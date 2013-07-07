@@ -85,6 +85,10 @@ add_action( 'widgets_init', 'justforfun_widgets_init' );
 function justforfun_scripts() {
 	wp_enqueue_style( 'justforfun-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'justforfun-style-plus', get_template_directory_uri() . '/justforfun.css' );
+
+	wp_enqueue_style( 'justforfun-style-post', get_template_directory_uri() . '/justforfun-post.css' );
+
 	wp_enqueue_script( 'justforfun-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'justforfun-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
