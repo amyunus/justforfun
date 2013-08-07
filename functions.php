@@ -87,7 +87,9 @@ function justforfun_scripts() {
 
 	wp_enqueue_style( 'justforfun-style-plus', get_template_directory_uri() . '/justforfun.css' );
 
-	wp_enqueue_style( 'justforfun-style-post', get_template_directory_uri() . '/justforfun-post.css' );
+	wp_enqueue_style( 'justforfun-style-genericons', get_template_directory_uri() . '/genericons.css' );
+
+	wp_enqueue_style( 'justforfun-style-webfonts', 'http://fonts.googleapis.com/css?family=Bitter|Averia+Serif+Libre' );
 
 	wp_enqueue_script( 'justforfun-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
