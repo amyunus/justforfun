@@ -89,8 +89,6 @@ function justforfun_scripts() {
 
 	wp_enqueue_style( 'justforfun-style-genericons', get_template_directory_uri() . '/genericons.css' );
 
-	wp_enqueue_style( 'justforfun-style-webfonts', 'http://fonts.googleapis.com/css?family=Bitter|Averia+Serif+Libre' );
-
 	wp_enqueue_script( 'justforfun-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'justforfun-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

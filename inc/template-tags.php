@@ -78,13 +78,13 @@ function justforfun_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'justforfun' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author -->
 
 				<div class="comment-metadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
-							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'justforfun' ), get_comment_date(), get_comment_time() ); ?>
+							<?php printf( _x( '%s', 'date', 'justforfun' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
 					</a>
 					<?php edit_comment_link( __( 'Edit', 'justforfun' ), '<span class="edit-link">', '</span>' ); ?>
@@ -174,7 +174,7 @@ function justforfun_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark">%3$s</a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s" rel="author">%6$s</a></span></span>', 'justforfun' ),
+	printf( __( '<a href="%1$s" title="%2$s" rel="bookmark"><div class="genericon genericon-time"></div>%3$s</a><span class="byline"> <div class="genericon genericon-user"></div><span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s" rel="author">%6$s</a></span></span>', 'justforfun' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		$time_string,

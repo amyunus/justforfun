@@ -47,7 +47,7 @@ if ( post_password_required() )
 				 * define justforfun_comment() and that will be used instead.
 				 * See justforfun_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'justforfun_comment' ) );
+				wp_list_comments( array( 'callback' => 'justforfun_comment', 'avatar_size' => 0 ) );
 			?>
 		</ol><!-- .comment-list -->
 
@@ -68,6 +68,6 @@ if ( post_password_required() )
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'justforfun' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php comment_form( array( 'comment_notes_before' => '<div class="comment-notes-before"></div>', 'comment_notes_after' => '<div class="comment-notes-after"></div>', 'title_reply' => '' ) ); ?>
 
 </div><!-- #comments -->
